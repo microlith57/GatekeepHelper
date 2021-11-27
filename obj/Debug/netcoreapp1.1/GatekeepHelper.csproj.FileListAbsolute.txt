@@ -1,0 +1,4 @@
+/home/microlith57/.local/share/Steam/steamapps/common/Celeste/Mods/GatekeepHelper/obj/Debug/netcoreapp1.1/GatekeepHelper.csprojAssemblyReference.cache
+/home/microlith57/.local/share/Steam/steamapps/common/Celeste/Mods/GatekeepHelper/obj/Debug/netcoreapp1.1/GatekeepHelper.AssemblyInfoInputs.cache
+/home/microlith57/.local/share/Steam/steamapps/common/Celeste/Mods/GatekeepHelper/obj/Debug/netcoreapp1.1/GatekeepHelper.AssemblyInfo.cs
+/home/microlith57/.local/share/Steam/steamapps/common/Celeste/Mods/GatekeepHelper/obj/Debug/netcoreapp1.1/GatekeepHelper.csproj.CoreCompileInputs.cache
