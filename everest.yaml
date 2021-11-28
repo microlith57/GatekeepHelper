@@ -1,6 +1,9 @@
 ﻿- Name: GatekeepHelper
   Version: 1.0.0
-  DLL: bin/Debug/GatekeepHelper.dll
+  DLL: bin/Debug/net452/GatekeepHelper.dll
   Dependencies:
     - Name: Everest
       Version: 1.2803.0
+  # OptionalDependencies:
+  #   - Name: CommunalHelper
+  #     Version: 1.9.4
