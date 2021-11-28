@@ -1,5 +1,9 @@
 ﻿using Monocle;
 using System;
+using Celeste.Mod.GatekeepHelper.Entities;
+using Celeste.Mod.Entities;
+using Mono.Cecil.Cil;
+using MonoMod.Cil;
 
 namespace Celeste.Mod.GatekeepHelper
 {
@@ -14,6 +18,12 @@ namespace Celeste.Mod.GatekeepHelper
 
     public override void Load()
     {
+      GenericHeartDoor.LoadILHooks();
+    }
+
+    public override void Unload()
+    {
+      GenericHeartDoor.UnloadILHooks();
     }
 
     public override void Initialize()
@@ -21,10 +31,6 @@ namespace Celeste.Mod.GatekeepHelper
     }
 
     public override void LoadContent(bool firstLoad)
-    {
-    }
-
-    public override void Unload()
     {
     }
   }
