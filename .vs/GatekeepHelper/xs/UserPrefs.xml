@@ -1,19 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="everest.yaml">
     <Files>
-      <File FileName="entities/CustomColorHeartDoor.cs" Line="26" Column="6" />
+      <File FileName="entities/CustomColorHeartDoor.cs" Line="15" Column="1" />
       <File FileName="everest.yaml" Line="7" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="GatekeepHelper" expanded="True">
+          <Node name="GatekeepHelper" expanded="True" selected="True">
             <Node name="GatekeepHelper" expanded="True">
               <Node name="Ahorn" expanded="True">
                 <Node name="entities" expanded="True" />
               </Node>
               <Node name="entities" expanded="True" />
-              <Node name="everest.yaml" selected="True" />
             </Node>
           </Node>
         </State>
