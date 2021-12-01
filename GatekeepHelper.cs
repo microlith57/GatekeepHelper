@@ -5,33 +5,26 @@ using Celeste.Mod.Entities;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 
-namespace Celeste.Mod.GatekeepHelper
-{
-  public class GatekeepHelper : EverestModule
-  {
+namespace Celeste.Mod.GatekeepHelper {
+  public class GatekeepHelper : EverestModule {
     public static GatekeepHelper Instance;
 
-    public GatekeepHelper()
-    {
+    public GatekeepHelper() {
       Instance = this;
     }
 
-    public override void Load()
-    {
-      GenericHeartDoor.LoadILHooks();
+    public override void Load() {
+      GenericHeartDoor.Load();
     }
 
-    public override void Unload()
-    {
-      GenericHeartDoor.UnloadILHooks();
+    public override void Unload() {
+      GenericHeartDoor.Unload();
     }
 
-    public override void Initialize()
-    {
+    public override void Initialize() {
     }
 
-    public override void LoadContent(bool firstLoad)
-    {
+    public override void LoadContent(bool firstLoad) {
     }
   }
 }
