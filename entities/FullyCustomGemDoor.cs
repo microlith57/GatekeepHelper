@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Celeste.Mod.Entities;
 using Monocle;
 using Microsoft.Xna.Framework;
@@ -9,12 +10,13 @@ namespace Celeste.Mod.GatekeepHelper.Entities {
   [CustomEntity("GatekeepHelper/FullyCustomGemDoor")]
   public class FullyCustomGemDoor : GenericHeartDoor {
     public string[] Flags;
+    public string[] CloseFlags;
 
     public FullyCustomGemDoor(EntityData data, Vector2 offset, EntityID entityID) : base(data, offset, entityID) {
       Color = Calc.HexToColor(data.Attr("color"));
       Flags = data.Attr("flags").Split(',');
+      CloseFlags = data.Attr("close_flags").Split(',');
       string[] IconNames = data.Attr("icons").Split(',');
-      // ShouldCloseAfter = Calc.HexToColor(data.Bool("close_after"));
 
       IconFillProgress = new float[Flags.Length];
       Icons = new List<MTexture>[Flags.Length];
@@ -24,15 +26,15 @@ namespace Celeste.Mod.GatekeepHelper.Entities {
       }
     }
 
-    public override bool ShouldTryClose {
-      get {
-        Player player = Scene.Tracker.GetEntity<Player>();
-        return player != null && Math.Abs(player.X - Center.X) > (DoorWidth + 20f) && player.X > X;
-      }
-    }
+    public override bool ShouldTryClose =>
+      CloseFlags.Length >= 1
+      && CloseFlags.All((flag) => FlagSet(flag));
 
     public override bool ShouldFillIcon(int id) {
-      string flag = Flags[id];
+      return FlagSet(Flags[id]);
+    }
+
+    private bool FlagSet(string flag) {
       if (flag.StartsWith("!")) {
         return !(base.Scene as Level).Session.GetFlag(flag.Remove(0, 1));
       }
