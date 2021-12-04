@@ -15,7 +15,7 @@ namespace Celeste.Mod.GatekeepHelper.Entities {
     public FullyCustomGemDoor(EntityData data, Vector2 offset, EntityID entityID) : base(data, offset, entityID) {
       Color = Calc.HexToColor(data.Attr("color"));
       Flags = data.Attr("flags").Split(',');
-      CloseFlags = data.Attr("close_flags").Split(',');
+      CloseFlags = data.Attr("closeFlags").Split(',');
       string[] IconNames = data.Attr("icons").Split(',');
 
       IconFillProgress = new float[Flags.Length];

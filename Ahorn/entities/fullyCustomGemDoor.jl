@@ -3,7 +3,7 @@
 using ..Ahorn, Maple
 
 @mapdef Entity "GatekeepHelper/FullyCustomGemDoor" FullyCustomGemDoor(x::Integer, y::Integer, width::Integer=40, height::Integer=Maple.defaultBlockHeight,
-    flags::String="", close_flags::String="", icons::String="objects/heartdoor/icon00", startHidden::Bool=false, color::String="18668F")
+    flags::String="", closeFlags::String="", icons::String="objects/heartdoor/icon00", startHidden::Bool=false, color::String="18668F")
 
 const placements = Ahorn.PlacementDict(
     "Fully Custom Gem Door (GatekeepHelper)" => Ahorn.EntityPlacement(
