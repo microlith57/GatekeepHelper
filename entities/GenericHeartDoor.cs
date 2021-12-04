@@ -6,8 +6,6 @@ using Microsoft.Xna.Framework;
 using Celeste;
 using Monocle;
 using Celeste.Mod.Entities;
-using Mono.Cecil.Cil;
-using MonoMod.Cil;
 
 namespace Celeste.Mod.GatekeepHelper.Entities {
   public abstract class GenericHeartDoor : Entity {

@@ -2,8 +2,6 @@
 using System;
 using Celeste.Mod.GatekeepHelper.Entities;
 using Celeste.Mod.Entities;
-using Mono.Cecil.Cil;
-using MonoMod.Cil;
 
 namespace Celeste.Mod.GatekeepHelper {
   public class GatekeepHelper : EverestModule {
